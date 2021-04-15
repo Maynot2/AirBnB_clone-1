@@ -20,3 +20,5 @@ path="/data/web_static/current/"
 route="location /hbnb_static/ {\n\t\talias $path;\n\t}"
 match="server_name _;"
 sed -i "s|$match|$match\n\n\t$route|" /etc/nginx/sites-available/default
+
+service nginx restart
