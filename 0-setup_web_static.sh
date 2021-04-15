@@ -17,6 +17,6 @@ ln -sf /data/web_static/releases/test/ /data/web_static/current
 chown -R ubuntu:ubuntu /data/
 
 path="/data/web_static/current/"
-route="location/web_static/ {\n\t\talias $path;\n\t}"
+route="location /hbnb_static/ {\n\t\talias $path;\n\t}"
 match="server_name _;"
 sed -i "s|$match|$match\n\n\t$route|" /etc/nginx/sites-available/default
