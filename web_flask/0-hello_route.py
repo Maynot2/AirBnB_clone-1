@@ -1,7 +1,9 @@
 """
     A simple flask exemple
 """
+
 from web_flask import app
+
 
 @app.route('/', strict_slashes=False)
 def hello():
