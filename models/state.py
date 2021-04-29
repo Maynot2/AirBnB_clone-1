@@ -6,7 +6,6 @@ from sqlalchemy.orm import relationship
 import os
 from sqlalchemy.ext.declarative import declarative_base
 from models.city import City
-#from models import storage
 
 
 class State(BaseModel, Base):
@@ -18,6 +17,8 @@ class State(BaseModel, Base):
 
     @property
     def cities(self):
+        """Fetches all cities for a given state"""
+        from models import storage
         l = []
         for k, v in storage.all(City).items():
             if v.state_id == self.id:
