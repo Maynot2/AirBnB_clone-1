@@ -8,6 +8,8 @@ from flask import render_template
 from models import storage
 from models.state import State
 
+app = Flask(__name__)
+
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_state():
