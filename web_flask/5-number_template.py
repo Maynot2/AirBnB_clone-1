@@ -1,9 +1,12 @@
+#!/usr/bin/python3
 """
-    A simple flask exemple with 3 routes
+    A simple flask exemple
 """
 
-from web_flask import app
+from flask import Flask
 from flask import render_template
+
+app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
