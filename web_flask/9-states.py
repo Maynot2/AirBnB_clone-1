@@ -25,6 +25,7 @@ def given_state(id):
     state = storage.all(State).get(key)
     return render_template('9-states.html', states=state)
 
+
 @app.teardown_appcontext
 def rm_sqlalchemy_sess(self):
     storage.close()
